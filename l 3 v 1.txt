@@ -1,0 +1,28 @@
+public class Employee {
+        private String ФИО;
+        private String должность;
+        private String email;
+        private String телефон;
+        private String зарплата;
+        private String возраст;
+    public Employee (String ФИО, String должность, String email, String телефон, String зарплата, String возраст) {
+        this.ФИО = ФИО;
+        this.должность = должность;
+        this.email = email;
+        this.телефон = телефон;
+        this.зарплата = зарплата;
+        this.возраст = возраст;
+    }
+        public void printInfo() {
+            System.out.println("ФИО: " + ФИО);
+            System.out.println("Должность: " + должность);
+            System.out.println("email: " + email);
+            System.out.println("телефон: " + телефон);
+            System.out.println("зарплата: " + зарплата);
+            System.out.println("возраст: " + возраст);
+            }
+    public static void main(String[] args) {
+        Employee employee = new Employee("Петроа Иван Игнатьевич", "айтишник", "https", "+7123456", "1 р.", "уже достаточно");
+        employee.printInfo();
+    }
+}

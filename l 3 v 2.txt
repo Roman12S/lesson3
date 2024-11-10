@@ -1,0 +1,42 @@
+public class Sotrudnik {
+    private String ФИО;
+    private String Должность;
+    private String email;
+    private String Телефон;
+    private double Зарплата;
+    private int Возраст;
+
+    public Sotrudnik(String ФИО, String Должность, String email, String Телефон, double Зарплата, int Возраст) {
+        this.ФИО = ФИО;
+        this.Должность = Должность;
+        this.email = email;
+        this.Телефон = Телефон;
+        this.Зарплата = Зарплата;
+        this.Возраст = Возраст;
+    }
+
+    public void printInfo() {
+        System.out.println("ФИО: " + ФИО);
+        System.out.println("Должность: " + Должность);
+        System.out.println("Email: " + email);
+        System.out.println("Телефон: " + Телефон);
+        System.out.println("Зарплата: " + Зарплата);
+        System.out.println("Возраст: " + Возраст);
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+
+        Sotrudnik[] sotrudniki = new Sotrudnik[5];
+
+        sotrudniki[0] = new Sotrudnik("Петров Петр Петрович", "Айтишник1", "IT.rulitSABAKA.eu1", "+1", 1, 100);
+        sotrudniki[1] = new Sotrudnik("Иванов Иван", "Айтишник2", "IT.rulitSABAKA.eu2", "+2", 2, 101);
+        sotrudniki[2] = new Sotrudnik("Дима Дмитрий", "Айтишник3", "IT.rulitSABAKA.eu3", "+3", 3, 102);
+        sotrudniki[3] = new Sotrudnik("Владислав Вендетта", "Айтишник4", "IT.rulitSABAKA.eu4", "+4", 4, 103);
+        sotrudniki[4] = new Sotrudnik("Какой-то Парень", "Айтишник5", "IT.rulitSABAKA.eu5", "+5", 5, 104);
+
+        for (Sotrudnik sotrudnik : sotrudniki) {
+            sotrudnik.printInfo();
+        }
+    }
+}

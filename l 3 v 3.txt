@@ -1,0 +1,47 @@
+public class Main {
+    private String name;
+
+    public Main(String name, String location) {
+        this.name = name;
+
+    }
+
+        public void printInfo() {
+        System.out.println("Парк: " + name);
+
+    }
+
+
+    public class Attraction {
+        private String title;
+        private String workingHours;
+        private double price;
+
+        public Attraction(String title, String workingHours, double price) {
+            this.title = title;
+            this.workingHours = workingHours;
+            this.price = price;
+        }
+
+        public void printInfo() {
+            System.out.println("Название аттракциона: " + title);
+            System.out.println("Время работы: " + workingHours);
+            System.out.println("Стоимость: " + price + " руб.");
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        Main park = new Main("Развлекухи", "где-то там");
+
+        park.printInfo();
+
+        Main.Attraction rollerCoaster = park.new Attraction("Хали - Гали", "10:00 - 11:00", 1);
+        Main.Attraction ferrisWheel = park.new Attraction("Пара-Трупер", "11:00 - 12:00", 2);
+        Main.Attraction merryGoRound = park.new Attraction("Нам с тобою было супер", "12:00 - 13:00", 3);
+
+        rollerCoaster.printInfo();
+        ferrisWheel.printInfo();
+        merryGoRound.printInfo();
+    }
+}
